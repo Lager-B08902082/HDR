@@ -36,7 +36,7 @@ $python3 main.py -r [-wg] [directory for cropped images] [pixel number] [g const
 
 ## Parameter setting
 * alignment
-    1. max scale degree: In order to align the images efficiently, we compress the images into $2^{-(max\ scale\ degree)}$ and recursively align and extended them by $\times 2$.
+    1. max scale degree: In order to align the images efficiently, we compress the images into $2^{-(max\ scale\ degree)}$ and recursively align and extended them by $$\times 2$$.
     2. noise epsilon: The way we aligned the images is to construct the MTB of all images and then compute the correctness. Noise eplison is for us to neglect the pixel with value too close to the median, and thus reduce the noise.
     3. alignment epsilon: While align the images, we choose a reference image and move the other images for $0$~$alignment\ epsilon$ pixels from initial position and compute the correctness. Set the position with highest correctness as the initial position for the next recusion. 
 
